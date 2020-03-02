@@ -438,6 +438,9 @@ class BasePlugin:
             Model = str(_Data.get('modelid',''))
             if not Model:
                 Model = ''
+                
+            if key > 40:
+                return
 
             Domoticz.Log("### Device > " + str(key) + ' Name:' + Name + ' Type:' + Type + ' Details:' + str(_Data['state']) + ' and ' + str(_Data.get('config','')) )
 
