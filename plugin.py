@@ -439,8 +439,11 @@ class BasePlugin:
             if not Model:
                 Model = ''
                 
-            if key > 40:
-                return
+            if key == 40:
+                Name = 'Name'
+                Model = 'Model'
+                Type = 'XXXX'
+                #IEEE = 'XXXXXXXX'
 
             Domoticz.Log("### Device > " + str(key) + ' Name:' + Name + ' Type:' + Type + ' Details:' + str(_Data['state']) + ' and ' + str(_Data.get('config','')) )
 
